@@ -1,0 +1,42 @@
+header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 10vh;
+  background-color: #0071dc;
+  padding: 10px;
+}
+
+.logo-container{
+  display: flex;
+  flex-grow: 1;
+}
+
+.search-container{
+  flex-grow: 3;
+}
+
+.logo-container h1{
+  color: #fff;
+}
+
+.logo-container img{
+  height: 40px;
+  align-self: center;
+  filter: invert(99%) sepia(1%) saturate(4%) hue-rotate(333deg) brightness(101%) contrast(104%);
+}
+
+.search-container input{
+  min-width: 80%;
+  height: 34px;
+  border-radius: 5px;
+  border-style: none;
+  font-size: 16px;
+}
+
+.search-container img{
+  filter: invert(76%) sepia(77%) saturate(548%) hue-rotate(338deg) brightness(101%) contrast(101%);
+  height: 32px;
+  background-color: bisque;
+  
+}
