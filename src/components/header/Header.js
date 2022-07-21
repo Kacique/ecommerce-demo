@@ -12,17 +12,21 @@ function Header() {
         <img src={Logo} alt="logo" className="logo" />
       </div>
       <div className="search-container">
-        <input type="search" id="site-search" name="q"></input>
-        <img src={Search} alt="search button" />
+        <input type="text" className="header-search-input" />
+        <div className="icon-container">
+          <img src={Search} alt="search button" />
+        </div>
       </div>
-      <ul>
-        <li>Sign In</li>
-        <li>Returns</li>
-        <li>
-          <img src={Cart} alt="cart" />
-        </li>
-        <li>0</li>
-      </ul>
+      <div className="link-container">
+        <ul>
+          <li>Sign In</li>
+          <li>Returns</li>
+          <li>
+            <img src={Cart} alt="cart" />
+          </li>
+          <li>0</li>
+        </ul>
+      </div>
     </header>
   );
 }
