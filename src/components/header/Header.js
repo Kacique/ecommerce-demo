@@ -3,8 +3,12 @@ import "./styles.css";
 import Logo from "../../images/logo.svg";
 import Cart from "../../images/shopping_basket.svg";
 import Search from "../../images/search.svg";
+import { Link } from "react-router-dom";
+import { useStateValue } from "../../state/StateProvider";
 
 function Header() {
+  const [{ basket }, dispatch] = useStateValue();
+
   return (
     <header>
       <div className="logo-container">
@@ -21,10 +25,12 @@ function Header() {
         <ul>
           <li>Sign In</li>
           <li>Returns</li>
-          <li>
-            <img src={Cart} alt="cart" />
-          </li>
-          <li>0</li>
+          <Link to={"/checkout"}>
+            <li>
+              <img src={Cart} alt="cart" />
+            </li>
+          </Link>
+          <li>{basket?.length}</li>
         </ul>
       </div>
     </header>
