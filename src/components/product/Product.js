@@ -5,8 +5,6 @@ import "./styles.css";
 function Product(props) {
   const [{ basket }, dispatch] = useStateValue();
 
-  console.log(basket);
-
   const addToBasket = () => {
     //dispatch the item into the data layer
     dispatch({
@@ -24,7 +22,7 @@ function Product(props) {
     <div className="product-container">
       <img src={props.img} alt="product" />
       <div className="product-info">
-        <h4>{props.price}</h4>
+        <h4>${props.price}</h4>
         <p>{props.title}</p>
       </div>
       <button onClick={addToBasket}>Add to Basket</button>

@@ -14,7 +14,7 @@ function Checkout() {
       <div className="product-container">
         <img src={item.image} alt="product" />
         <div className="product-info">
-          <h4>{item.price}</h4>
+          <h4>${item.price}</h4>
           <p>{item.title}</p>
         </div>
         <button onClick={removeProduct}>Remove from Basket</button>
@@ -23,9 +23,13 @@ function Checkout() {
   });
 
   const totalPrice = () => {
-    for (let i = 0; i < basket.length; i++) {
-      console.log(basket[i].price);
+    let arrCopy = basket;
+    let price = 0;
+    for (let i = 0; i < arrCopy.length; i++) {
+      console.log(arrCopy[i]);
+      price = price + arrCopy[i].price;
     }
+    return price;
   };
 
   return (
@@ -35,8 +39,12 @@ function Checkout() {
         {basketItems}
       </div>
       <div className="checkout-right">
-        <p>Subtotal({totalPrice()})</p>
-        <button>Proceed to checkout</button>
+        <div>
+          <p>
+            Subtotal({basket.length} items): ${totalPrice()}
+          </p>
+          <button>Proceed to checkout</button>
+        </div>
       </div>
     </div>
   );

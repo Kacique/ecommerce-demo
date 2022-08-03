@@ -29,6 +29,14 @@
   text-align: center;
 }
 
+.checkout-right div{
+  background-color: white;
+  margin-top: 38px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+}
+
 button{
   background: #f0c14b;
   border: 1px solid;
