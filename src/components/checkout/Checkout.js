@@ -1,26 +1,12 @@
 import React from "react";
+import CheckoutProduct from "../checkoutProduct/CheckoutProduct";
 import { useStateValue } from "../../state/StateProvider";
 import "./styles.css";
 
 function Checkout() {
   const [{ basket }, dispatch] = useStateValue();
 
-  const removeProduct = () => {
-    console.log("removed");
-  };
-
-  const basketItems = basket.map((item) => {
-    return (
-      <div className="product-container">
-        <img src={item.image} alt="product" />
-        <div className="product-info">
-          <h4>${item.price}</h4>
-          <p>{item.title}</p>
-        </div>
-        <button onClick={removeProduct}>Remove from Basket</button>
-      </div>
-    );
-  });
+  console.log(basket);
 
   const totalPrice = () => {
     let arrCopy = basket;
@@ -32,11 +18,22 @@ function Checkout() {
     return price;
   };
 
+  const products = basket.map((item) => {
+    return (
+      <CheckoutProduct
+        title={item.title}
+        img={item.image}
+        price={item.price}
+        id={item.id}
+      />
+    );
+  });
+
   return (
     <div className="checkout-container">
       <div className="checkout-left">
         <h2>Your shopping basket</h2>
-        {basketItems}
+        {products}
       </div>
       <div className="checkout-right">
         <div>

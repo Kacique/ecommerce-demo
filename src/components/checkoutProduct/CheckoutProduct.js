@@ -2,21 +2,14 @@ import React from "react";
 import { useStateValue } from "../../state/StateProvider";
 import "./styles.css";
 
-function Product({ id, title, img, price }) {
+function CheckoutProduct({ id, title, img, price }) {
   const [{ basket }, dispatch] = useStateValue();
 
-  console.log(basket);
-
-  const addToBasket = () => {
+  const removeProduct = () => {
     //dispatch the item into the data layer
     dispatch({
-      type: "ADD_TO_BASKET",
-      item: {
-        id: id,
-        title: title,
-        image: img,
-        price: price,
-      },
+      type: "REMOVE_FROM_BASKET",
+      id: id,
     });
   };
 
@@ -27,9 +20,9 @@ function Product({ id, title, img, price }) {
         <h4>${price}</h4>
         <p>{title}</p>
       </div>
-      <button onClick={addToBasket}>Add to Basket</button>
+      <button onClick={removeProduct}>Remove from Basket</button>
     </div>
   );
 }
 
-export default Product;
+export default CheckoutProduct;

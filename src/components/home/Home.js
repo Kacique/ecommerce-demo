@@ -19,6 +19,7 @@ function Home() {
             }
             price={99.99}
             title={"Beats Audio"}
+            id={1}
           />
           <Product
             img={
@@ -26,6 +27,7 @@ function Home() {
             }
             price={155.89}
             title={"Homfa 41.7"}
+            id={2}
           />
         </div>
         <div className="product-row">
@@ -35,6 +37,7 @@ function Home() {
             }
             price={29.99}
             title={"Mini Fridge"}
+            id={3}
           />
           <Product
             img={
@@ -42,6 +45,7 @@ function Home() {
             }
             price={24.0}
             title={"Backpack"}
+            id={4}
           />
           <Product
             img={
@@ -49,6 +53,7 @@ function Home() {
             }
             price={78.0}
             title={"FujiMax Camera"}
+            id={5}
           />
         </div>
         <div className="product-row">
@@ -58,6 +63,7 @@ function Home() {
             }
             price={498.0}
             title={"Samsung Tv"}
+            id={6}
           />
         </div>
       </div>
