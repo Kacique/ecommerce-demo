@@ -71,6 +71,10 @@ header{
   font-weight: 600;
 }
 
+a:-webkit-any-link{
+  text-decoration: none;
+}
+
 .link-container ul img{
   filter: invert(76%) sepia(77%) saturate(548%) hue-rotate(338deg) brightness(101%) contrast(101%);
 }

@@ -23,7 +23,9 @@ function Header() {
       </div>
       <div className="link-container">
         <ul>
-          <li>Sign In</li>
+          <Link to="/login">
+            <li>Sign In</li>
+          </Link>
           <li>Returns</li>
           <Link to={"/checkout"}>
             <li>
