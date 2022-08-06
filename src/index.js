@@ -5,6 +5,7 @@ import App from "./App";
 import Checkout from "./components/checkout/Checkout";
 import Login from "./components/login/Login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./firebase.js";
 
 import { StateProvider } from "./state/StateProvider";
 import reducer, { initialState } from "./state/reducer";
